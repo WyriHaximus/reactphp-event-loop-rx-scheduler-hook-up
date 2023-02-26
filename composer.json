@@ -14,9 +14,9 @@
         "azjezz/psl": "<2"
     },
     "autoload": {
-        "psr-4": {
-            "WyriHaximus\\React\\": "src/"
-        }
+        "files": [
+            "src/bootstrap.php"
+        ]
     },
     "config": {
         "allow-plugins": {
