@@ -7,7 +7,8 @@ use Rx\AsyncSchedulerInterface;
 use Rx\Scheduler;
 
 (static function (): void {
-    $factory = static fn (): AsyncSchedulerInterface => new Scheduler\EventLoopScheduler(Loop::get());
+    $scheduler = new Scheduler\EventLoopScheduler(Loop::get());
+    $factory   = static fn (): AsyncSchedulerInterface => $scheduler;
     Scheduler::setDefaultFactory($factory);
     Scheduler::setAsyncFactory($factory);
 })();
