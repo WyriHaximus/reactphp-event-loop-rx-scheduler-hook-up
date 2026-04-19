@@ -1,44 +1,48 @@
 {
-    "name": "wyrihaximus/react-event-loop-rx-scheduler-hook-up",
-    "description": "\ud83e\ude9d Hook up ReactPHP Event Loop to the RxPHP Scheduler",
-    "license": "MIT",
-    "require": {
-        "php": "^8.2",
-        "react/event-loop": "^1.5",
-        "reactivex/rxphp": "^2.0.12"
-    },
-    "require-dev": {
-        "wyrihaximus/async-test-utilities": "^7.2"
-    },
-    "autoload": {
-        "files": [
-            "src/bootstrap.php"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "WyriHaximus\\Tests\\React\\": "tests/"
-        }
-    },
-    "config": {
-        "allow-plugins": {
-            "composer/package-versions-deprecated": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "ergebnis/composer-normalize": true,
-            "icanhazstring/composer-unused": true,
-            "infection/extension-installer": true
-        },
-        "platform": {
-            "php": "8.2.13"
-        },
-        "sort-packages": true
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "composer normalize"
-        ],
-        "post-update-cmd": [
-            "composer normalize"
-        ]
+  "name": "wyrihaximus/react-event-loop-rx-scheduler-hook-up",
+  "description": "\ud83e\ude9d Hook up ReactPHP Event Loop to the RxPHP Scheduler",
+  "license": "MIT",
+  "require": {
+    "php": "^8.4",
+    "react/event-loop": "^1.6.0",
+    "reactivex/rxphp": "^2.0.12"
+  },
+  "require-dev": {
+    "wyrihaximus/async-test-utilities": "^12.2.0",
+    "wyrihaximus/makefiles": "^0.7.6"
+  },
+  "autoload": {
+    "files": [
+      "src/bootstrap.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "WyriHaximus\\Tests\\React\\": "tests/"
     }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "ergebnis/composer-normalize": true,
+      "icanhazstring/composer-unused": true,
+      "infection/extension-installer": true,
+      "phpstan/extension-installer": true,
+      "wyrihaximus/makefiles": true,
+      "wyrihaximus/test-utilities": true
+    },
+    "platform": {
+      "php": "8.4.13"
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "make on-install-or-update || true"
+    ],
+    "post-update-cmd": [
+      "make on-install-or-update || true"
+    ]
+  }
 }
