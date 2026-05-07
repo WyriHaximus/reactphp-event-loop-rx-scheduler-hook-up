@@ -21,7 +21,7 @@ Use RxPHP as you normally would, this package ensures the ReactPHP event loop is
 
 The MIT License (MIT)
 
-Copyright (c) 2024 Cees-Jan Kiewiet
+Copyright (c) 2026 Cees-Jan Kiewiet
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
